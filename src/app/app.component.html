@@ -1,4 +1,5 @@
 <h1>My Student Mangment App</h1>
-<li><a routerLink="/one">One</a></li>
-<li><a routerLink="/two">Two</a></li>
-<router-outlet></router-outlet>
+<app-login *ngIf="loged==false" [loged]=loged></app-login>
+<li *ngIf="loged==true"><a routerLink="/one">One</a></li>
+<li *ngIf="loged==true"><a routerLink="/two">Two</a></li>
+<router-outlet *ngIf="loged==true"></router-outlet>
