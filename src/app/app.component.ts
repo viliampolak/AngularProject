@@ -1,20 +1,18 @@
-import { Component, VERSION } from '@angular/core';
+import { Component } from '@angular/core';
 import { Location } from '@angular/common';
-import { AuthService } from './auth.service';
 
 @Component({
   selector: 'my-app',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
-  providers: []
+  providers: [],
 })
 export class AppComponent {
-
   constructor(private location: Location) {}
 
   ngOnInit() {
-    if(AuthService.loged==false){
-      this.location.go('login')
+    if (true == true) {
+      this.location.replaceState('login');
     }
   }
 

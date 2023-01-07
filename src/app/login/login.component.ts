@@ -1,4 +1,6 @@
 import { Component, Input } from '@angular/core';
+import { Location } from '@angular/common';
+
 
 @Component({
   selector: 'app-login',
@@ -7,9 +9,8 @@ import { Component, Input } from '@angular/core';
 })
 export class LoginComponent {
   @Input() loged: boolean;
-
+  private location: Location;
   log_in(): void {
-    this.loged = !this.loged;
     console.log('Loged : ' + this.loged);
   }
 }
