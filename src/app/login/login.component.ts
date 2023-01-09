@@ -8,9 +8,10 @@ import { Location } from '@angular/common';
   styleUrls: ['./login.component.css'],
 })
 export class LoginComponent {
+  constructor(private location: Location) {}
   @Input() loged: boolean;
-  private location: Location;
   log_in(): void {
     console.log('Loged : ' + this.loged);
+    this.location.replaceState('one');
   }
 }

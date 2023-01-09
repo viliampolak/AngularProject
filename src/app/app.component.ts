@@ -8,13 +8,6 @@ import { Location } from '@angular/common';
   providers: [],
 })
 export class AppComponent {
-  constructor(private location: Location) {}
-
-  ngOnInit() {
-    if (true == true) {
-      this.location.replaceState('login');
-    }
-  }
 
   name = 'Viliam';
   loged = false;
