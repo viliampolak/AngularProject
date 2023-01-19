@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { TestComponent } from './test/test.component';
 import { AppRoutingModule } from './app.routing.module';
-import { LayoutComponent } from './layout/layout.component';
 
 
 @NgModule({

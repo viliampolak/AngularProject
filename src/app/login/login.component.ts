@@ -23,7 +23,7 @@ onSubmit() {
   //True if all the fields are filled
   if(this.submitted)
   {
-    alert("Great!!");
+    console.log("Great!!");
   }
  
 }
