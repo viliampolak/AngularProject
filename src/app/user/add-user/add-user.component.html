@@ -1,76 +1,126 @@
 <div class="col-md-6 user-container" id="hihihi">
   <h2 class="text-center">Add User</h2>
   <form>
+
     <div class="form-group">
-      <label for="username">User Name:</label>
+    <label for="firstName">First Name:</label>
+    <input
+      formControlName="firstName"
+      placeholder="First Name"
+      name="firstName"
+      class="form-control"
+      id="firstName"
+    />
+    </div>
+
+    <div class="form-group">
+    <label for="lastName">Last Name:</label>
+    <input
+      formControlName="lastName"
+      placeholder="Last Name"
+      name="lastName"
+      class="form-control"
+      id="lastName"
+    />
+    </div>
+
+    <div class="form-group">
+    <label for="class">Trieda:</label>
+    <input
+      type="option"
+      formControlName="class"
+      placeholder="Trieda"
+      name="class"
+      class="form-control"
+      id="class"
+    />
+    </div>
+
+    <div class="form-group">
+    <label for="age">Age:</label>
+    <input
+      type="number"
+      formControlName="age"
+      placeholder="age"
+      name="age"
+      class="form-control"
+      id="age"
+    />
+    </div>
+
+    <div class="form-group">
+      <label for="birthday">Birthday:</label>
       <input
-        type="text"
-        formControlName="username"
-        placeholder="username"
-        name="username"
+        type="date"
+        formControlName="date"
+        placeholder="date"
+        name="date"
         class="form-control"
-        id="username"
+        id="date"
       />
     </div>
 
     <div class="form-group">
-      <label for="password">Password:</label>
+      <label for="odbor">Odbor:</label>
       <input
-        type="password"
-        formControlName="password"
-        placeholder="password"
-        name="password"
+        type="option"
+        formControlName="date"
+        placeholder="odbor"
+        name="odbor"
         class="form-control"
-        id="password"
+        id="odbor"
       />
     </div>
 
-    <div class="form-group">
-      <label for="firstName">First Name:</label>
-      <input
-        formControlName="firstName"
-        placeholder="First Name"
-        name="firstName"
-        class="form-control"
-        id="firstName"
-      />
+  <div class="form-group">
+    <label for="pohlavie">Pohlavie:</label>
+    <input
+      type="option"
+      formControlName="pohlavie"
+      placeholder="pohlavie"
+      name="pohlavie"
+      class="form-control"
+      id="pohlavie"
+    />
+  </div>
+
+  <div class="form-group">
+    <label for="priemer">Priemer:</label>
+    <input
+      type="number"
+      formControlName="priemer"
+      placeholder="priemer"
+      name="priemer"
+      class="form-control"
+      id="priemer"
+    />
     </div>
 
-    <div class="form-group">
-      <label for="lastName">Last Name:</label>
-      <input
-        formControlName="lastName"
-        placeholder="Last name"
-        name="lastName"
-        class="form-control"
-        id="lastName"
-      />
+  <div class="form-group">
+    <label for="disabled">Disabled:</label>
+    <input
+      type="checkbox"
+      formControlName="disabled"
+      placeholder="disabled"
+      name="disabled"
+      class="form-control"
+      id="diasabled"
+    />
     </div>
 
-    <div class="form-group">
-      <label for="age">Age:</label>
-      <input
-        type="number"
-        formControlName="age"
-        placeholder="age"
-        name="age"
-        class="form-control"
-        id="age"
-      />
+  <div class="form-group">
+    <label for="ocenenia">Ocenenia:</label>
+    <input
+      type="text"
+      formControlName="ocenenia"
+      placeholder="ocenenia"
+      name="ocenenia"
+      class="form-control"
+      id="ocenenia"
+    />
     </div>
 
-    <div class="form-group">
-      <label for="salary">Salary:</label>
-      <input
-        type="number"
-        formControlName="salary"
-        placeholder="salary"
-        name="salary"
-        class="form-control"
-        id="salary"
-      />
-    </div>
-
+    <br />
     <button class="btn btn-success">Add</button>
   </form>
 </div>

@@ -14,7 +14,15 @@
 }
 }
 
-
 :host {
   padding-top: 66px;
+}
+
+.nav-link {
+  text-align: right;
+  padding-right: 10%;
+}
+
+#hihihi {
+  padding-left: 3%;
 }
