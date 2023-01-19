@@ -15,7 +15,6 @@ import { EditUserComponent } from './user/edit-user/edit-user.component';
       { path: 'listuser', component: ListUserComponent },
       { path: 'adduser', component: AddUserComponent },
       { path: 'edituser', component: EditUserComponent },
-
       { path: '**', redirectTo: 'login' },
     ]),
   ],
