@@ -4,11 +4,14 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
+import { TestComponent } from './test/test.component';
 import { AppRoutingModule } from './app.routing.module';
+import { LayoutComponent } from './layout/layout.component';
+
 
 @NgModule({
   imports: [BrowserModule, FormsModule, ReactiveFormsModule,AppRoutingModule],
-  declarations: [AppComponent, LoginComponent],
-  bootstrap: [AppComponent, LoginComponent],
+  declarations: [],
+  bootstrap: [AppComponent, LoginComponent,TestComponent],
 })
 export class AppModule {}
