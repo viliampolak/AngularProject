@@ -1,20 +1,12 @@
-<h1>Studemt Management</h1>
+<div class="container">
+<a routerLinkActive="active" 
+   routerLink="/login">Login</a> |
 
-<div style="padding: 20%;">
-<h2>Log in</h2>  
-<form >
-<div class="form-group" style="padding: 0px,px,0px,0px">
-  <label for="exampleInputEmail1">Email address</label>
-  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-  <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+<a routerLinkActive="active" 
+   routerLink="/home">Home</a> | 
+
+<a routerLinkActive="active" 
+  routerLink="/catalog">Catalog</a> 
+  
+<router-outlet></router-outlet>
 </div>
-<div class="form-group">
-  <label for="exampleInputPassword1">Password</label>
-  <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-</div>
-<div class="form-group form-check">
-  <input type="checkbox" class="form-check-input" id="exampleCheck1">
-  <label class="form-check-label" for="exampleCheck1">Check me out</label>
-</div>
-<button type="submit" class="btn btn-primary">Submit</button>
-</form></div>
