@@ -1,6 +1,7 @@
 <div class="col-md-6 user-container">
 <h2 style="margin: auto"> User Details</h2>
-<button class="btn btn-danger" style="width:100px" (click)="addUser()"> Add User</button>
+ <button class="btn btn-danger" style="width:100px" > Add User</button> 
+ <!-- (click)="addUser()" -->
 <table class="table table-striped">
   <thead>
   <tr>
@@ -20,8 +21,10 @@
     <td></td>
     <td></td>
     <td></td>
-    <td><button class="btn btn-success" (click)="deleteUser(user)"> Delete</button>
-      <button class="btn btn-success" (click)="editUser(user)" style="margin-left: 20px;"> Edit</button></td>
+    <td><button class="btn btn-success" > Delete</button>
+      <!-- (click)="deleteUser(user)" -->
+      <button class="btn btn-success"  style="margin-left: 20px;"> Edit</button></td>
+      <!-- (click)="editUser(user)" -->
   </tr>
   </tbody>
 </table>
