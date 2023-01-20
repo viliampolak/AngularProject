@@ -8,20 +8,21 @@ import { Router } from '@angular/router';
 })
 export class LayoutComponent {
   constructor(private router: Router) {}
-  v = 'false';
   navbarCollapsed = true;
+  v = localStorage.getItem('logged');
+  ngOnInit() {
+    this.v = 'false';
+  }
 
   toggleNavbarCollapsing() {
-    this.navbarCollapsed = !this.navbarCollapsed;
     this.v = localStorage.getItem('logged');
+    this.navbarCollapsed = !this.navbarCollapsed;
+
   }
 
   logout() {
-    localStorage.setItem('logged', 'false');
+    localStorage.removeItem('logged');
     this.router.navigate(['/login']);
   }
 
-  ngOnInit() {
-    this.v = localStorage.getItem('logged');
-  }
 }
