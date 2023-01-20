@@ -26,14 +26,16 @@
 
     <div class="form-group">
     <label for="class">Trieda:</label>
-    <input
-      type="option"
-      formControlName="class"
-      placeholder="Trieda"
-      name="class"
-      class="form-control"
-      id="class"
-    />
+      <select name="Trieda" id="">
+        <option value="1.A">1.A</option>
+        <option value="1.B">1.B</option>
+        <option value="2.A">2.A</option>
+        <option value="2.B">2.B</option>
+        <option value="3.A">3.A</option>
+        <option value="3.B">3.B</option>
+        <option value="4.A">4.A</option>
+        <option value="4.B">4.B</option>
+      </select>
     </div>
 
     <div class="form-group">
@@ -98,15 +100,8 @@
 
   <div class="form-group">
     <label for="disabled">Disabled:</label>
-    <input
-      type="checkbox"
-      formControlName="disabled"
-      placeholder="disabled"
-      name="disabled"
-      class="form-control"
-      id="diasabled"
-    />
-    </div>
+    <input type="checkbox" id="disabled" name="disabled">
+  </div>
 
   <div class="form-group">
     <label for="ocenenia">Ocenenia:</label>
@@ -118,7 +113,7 @@
       class="form-control"
       id="ocenenia"
     />
-    </div>
+  </div>
 
     <br />
     <button class="btn btn-success">Add</button>
