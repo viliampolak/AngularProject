@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
-import { LogIntoService } from '../log-into.service';
-import { UserService } from '../user.service';
 
 @Component({
   selector: 'app-login',
@@ -18,6 +16,7 @@ export class LoginComponent implements OnInit {
     if (this.email == 'admin@admin' && this.password == 'admin1') {
       console.log('Logged');
       localStorage.setItem('logged', 'true');
+      console.log(localStorage.getItem('logged'));
       this.router.navigate(['listuser']);
     } else {
       console.log('Wrong Username Or Password');
