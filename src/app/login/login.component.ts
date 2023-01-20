@@ -16,21 +16,23 @@ export class LoginComponent implements OnInit {
     public usersServ: UserService
   ) {}
   
-  username = new FormControl('');
+  email = new FormControl('');
   password = new FormControl('');
 
-  validate() {
-    if (
-      this.usersServ.users.find(
-        ({ username, password}) => username == this.username.value && password == this.password.value
-      )
-      ) {
-        console.log('works');
+  // validate() {
+  //   if (
+  //     this.usersServ.users.find(
+  //       ({ email, password}) => username == this.username.value && password == this.password.value
+  //     )
+  //     ) {
+  //       console.log('works');
 
-        this.login.saveData('login',this.username.value);
-        // this.router.navigate('/listuser')
-      } 
-    }
+  //       this.login.saveData('login',this.username.value);
+  //       this.router.navigate(['/listuser']);
+  //     } else {
+  //       this.router.navigate(['/login']);
+  //     }
+  //   }
 
   
     ngOnInit() {}
