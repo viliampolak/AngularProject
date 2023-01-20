@@ -15,9 +15,6 @@
      id="navbarCollapse">
   <ul class="navbar-nav mr-auto">
     <li class="nav-item active">
-      <a class="nav-link" routerLink="/login">Login<span ></span></a>
-    </li>
-    <li class="nav-item active">
       <a class="nav-link" routerLink="/adduser">Add User</a>
     </li>
     <li class="nav-item active">
@@ -25,6 +22,12 @@
     </li>
     <li class="nav-item active">
     <a class="nav-link" routerLink="/edituser">Edit User</a>
+    </li>
+    <li class="nav-item active" *ngIf='v=="true"'>
+    <a class="nav-link" >Logout</a>
+    </li>
+    <li class="nav-item active" *ngIf="v=='false'">
+    <a class="nav-link" routerLink="/login">Login</a>
     </li>
   </ul>
 </div>

@@ -8,7 +8,6 @@ import { ListUserComponent } from './user/list-user/list-user.component';
 import { EditUserComponent } from './user/edit-user/edit-user.component';
 
 @NgModule({
-  declarations: [AppComponent, LoginComponent, LayoutComponent, AddUserComponent,ListUserComponent,EditUserComponent],
   imports: [
     RouterModule.forRoot([
       { path: 'login', component: LoginComponent },

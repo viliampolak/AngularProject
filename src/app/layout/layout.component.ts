@@ -6,10 +6,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./layout.component.css']
 })
 export class LayoutComponent {
-
   navbarCollapsed = true;
+  v = 'false';
   toggleNavbarCollapsing() {
     this.navbarCollapsed = !this.navbarCollapsed;
   }
 
+  ngOnInit() {
+    if (localStorage.getItem('logged') == 'true') {
+    this.v = 'true';
+    }
+    else{ let v = 'false';}
+  }
 }

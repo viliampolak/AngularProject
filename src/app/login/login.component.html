@@ -1,9 +1,10 @@
 <div style="padding: 20%;">
   <h2>Log in</h2>
   <form>
-    <div class="form-control">
-      <label for="exampleInputEmail1">Email address</label>
+    <div class="form-group">
+      <label for="exampleInputEmail1">Email address</label><br>
       <input
+        [(ngModel)]="this.email"
         type="email"
         id="exampleInputEmail1"
         aria-describedby="emailHelp"
@@ -12,9 +13,10 @@
     </div>
     <!-- [formControl]="email" -->
     <br />
-    <div class="form-control">
-      <label for="exampleInputPassword1">Password</label>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Password</label><br>
       <input
+      [(ngModel)]="password"
         type="password"
         id="exampleInputPassword1"
         placeholder="Password"
@@ -22,6 +24,6 @@
       <!-- [formControl]="password" -->
     </div>
     <br />
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" class="btn btn-primary" (click)="LoginUser()">Submit</button>
   </form>
 </div>
