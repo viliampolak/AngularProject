@@ -16,8 +16,8 @@ export class LoginComponent implements OnInit {
     public usersServ: UserService
   ) {}
   
-  email = new FormControl('');
-  password = new FormControl('');
+  // email = new FormControl('');
+  // password = new FormControl('');
 
   // validate() {
   //   if (
