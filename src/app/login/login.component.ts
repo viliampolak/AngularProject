@@ -14,8 +14,7 @@ export class LoginComponent implements OnInit {
   email: string;
   password: string;
 
-  LoginUser() {
-    console.log(this.email,this.password);
+  loginuser() {
     if (this.email == 'admin@admin' && this.password == 'admin1') {
       console.log('Logged');
       localStorage.setItem('logged', 'true');
