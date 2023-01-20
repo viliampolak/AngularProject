@@ -1,37 +1,37 @@
-import { Component } from '@angular/core';
-import { FormControl,FormGroup,Validators,FormBuilder } from '@angular/forms';
+import { Component, OnInit } from '@angular/core';
+import { FormControl,FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
+import { LogIntoService } from '../log-into.service';
+import { UserService } from '../user.service';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent {
-  //Form variables
-registerForm:any = FormGroup;
-submitted = false;
-constructor( private formBuilder: FormBuilder){}
-//Add user form actions
-get f() { return this.registerForm.controls; }
-onSubmit() {
+export class LoginComponent implements OnInit {
+  constructor(
+    public login: LogIntoService,
+    public router: Router,
+    public usersServ: UserService
+  ) {}
   
-  this.submitted = true;
-  // stop here if form is invalid
-  if (this.registerForm.invalid) {
-      return;
-  }
-  //True if all the fields are filled
-  if(this.submitted)
-  {
-    console.log("Great!!");
-  }
- 
-}
-  ngOnInit() {
-    //Add User form validations
-    this.registerForm = this.formBuilder.group({
-    email: ['', [Validators.required, Validators.email]],
-    password: ['', [Validators.required]]
-    });
-  }
-}
+  username = new FormControl('');
+  password = new FormControl('');
+
+  validate() {
+    if (
+      this.usersServ.users.find(
+        ({ username, password}) => username == this.username.value && password == this.password.value
+      )
+      ) {
+        console.log('works');
+
+        this.login.saveData('login',this.username.value);
+        // this.router.navigate('/listuser')
+      } 
+    }
+
+  
+    ngOnInit() {}
+    }
